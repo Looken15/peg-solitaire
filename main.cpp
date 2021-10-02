@@ -1,10 +1,14 @@
 ﻿#include <iostream>
 
 #include "board.h"
+#include "alg.h"
 
 int main()
 {
-    board b = board();
+    setlocale(LC_ALL, "RUSSIAN");
+	time_t start = clock();
 
-    b.print();
+	astar();
+
+	std::cout << (double)(clock() - start) / CLOCKS_PER_SEC << std::endl;
 }
